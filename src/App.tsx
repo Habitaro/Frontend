@@ -1,11 +1,20 @@
-import React from 'react';
-import './App.css';
+import React, { FC } from "react";
+import "./App.css";
+import "./font.css";
+import Header from "./components/Header/Header";
+import { Outlet } from "react-router-dom";
+import Footer from "./components/Footer/Footer";
 
-function App() {
+const App: FC = () => {
   return (
-    <div className="App">
-    </div>
+    <>
+      <Header />
+      <div className="content">
+        <Outlet />
+      </div>
+      <Footer/>
+    </>
   );
-}
+};
 
 export default App;
